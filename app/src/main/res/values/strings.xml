@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MVPCalculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnSum_contentDescription">Button to sum.</string>
+    <string name="tvResult_text">Result</string>
+    <string name="menu_delete">delete</string>
+    <string name="menu_list">list</string>
+    <string name="error_emptyField">The field can\'t be empty.</string>
+    <string name="tieNumber2_hint">Number 2</string>
+    <string name="tieNumber1_hint">Number 1</string>
+</resources>

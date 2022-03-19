@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/calculatorFragment">
+
+    <fragment
+            android:id="@+id/calculatorFragment"
+            android:name="com.elian.mvpcalculator.ui.calculator.CalculatorFragment"
+            android:label="fragment_calculator"
+            tools:layout="@layout/fragment_calculator" >
+        <action
+                android:id="@+id/action_calculatorFragment_to_operationListFragment"
+                app:destination="@id/operationListFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/operationListFragment"
+            android:name="com.elian.mvpcalculator.ui.operationlist.OperationListFragment"
+            android:label="fragment_operation_list"
+            tools:layout="@layout/fragment_operation_list" >
+        <action
+                android:id="@+id/action_operationListFragment_to_calculatorFragment"
+                app:destination="@id/calculatorFragment" />
+    </fragment>
+</navigation>

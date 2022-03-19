@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.calculator.CalculatorFragment"
+        android:id="@+id/frameLayout">
+
+    <!--region Guide Lines-->
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+    <!--endregion-->
+
+    <!--region Inputs-->
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumber1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:errorEnabled="true"
+            app:layout_constraintVertical_bias="0.18">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tieNumber1_hint"
+                android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumber2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tilNumber1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:errorEnabled="true"
+            app:layout_constraintVertical_bias="0.25">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tieNumber2_hint"
+                android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--endregion-->
+
+    <!--region Operation Buttons-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNumber2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/linearLayout">
+
+        <!--region Sum Button-->
+        <ImageButton
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSum_contentDescription"
+                android:minHeight="@dimen/_btnOperation_minHeight"
+                android:minWidth="@dimen/_btnOperation_minWidth"
+                android:src="@drawable/ic_action_add"
+                style="@style/shape__btnOperation" />
+        <!--endregion-->
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+        <!--region Subtract Button-->
+        <ImageButton
+                android:id="@+id/btnSubtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSum_contentDescription"
+                android:minHeight="@dimen/_btnOperation_minHeight"
+                android:minWidth="@dimen/_btnOperation_minWidth"
+                android:src="@drawable/ic_action_subtract"
+                style="@style/shape__btnOperation" />
+        <!--endregion-->
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+        <!--region Multiply Button-->
+        <ImageButton
+                android:id="@+id/btnMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSum_contentDescription"
+                android:minHeight="@dimen/_btnOperation_minHeight"
+                android:minWidth="@dimen/_btnOperation_minWidth"
+                android:src="@drawable/ic_action_multiply"
+                style="@style/shape__btnOperation" />
+        <!--endregion-->
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+        <!--region Divide Button-->
+        <ImageButton
+                android:id="@+id/btnDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSum_contentDescription"
+                android:minHeight="@dimen/_btnOperation_minHeight"
+                android:minWidth="@dimen/_btnOperation_minWidth"
+                android:src="@drawable/ic_action_divide"
+                style="@style/shape__btnOperation" />
+        <!--endregion-->
+    </LinearLayout>
+    <!--endregion-->
+
+    <!--region Result-->
+    <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tvResult_text"
+            style="@style/tvResult"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintEnd_toStartOf="@+id/glEnd" />
+    <!--endregion-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

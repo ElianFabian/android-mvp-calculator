@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_btnOperation_minHeight">64dp</dimen>
+    <dimen name="_btnOperation_minWidth">64dp</dimen>
+    <dimen name="tvResult_textSize">32sp</dimen>
+</resources>
