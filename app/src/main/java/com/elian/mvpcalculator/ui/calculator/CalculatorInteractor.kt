@@ -8,6 +8,7 @@ class CalculatorInteractor(private val listener: CalculatorContract.IOnInteracto
     CalculatorContract.IInteractor,
     IRepositoryCallback
 {
+    //region Methods
 
     override fun validateData(operation: Operation)
     {
@@ -24,12 +25,14 @@ class CalculatorInteractor(private val listener: CalculatorContract.IOnInteracto
 
             else                             -> Unit
         }
-        
+
         // If there's any error we're not going to add the operation into the repository
         if (operation.error != Operation.Error.NO_ERROR) return
 
         OperationStaticRepository.getInstance().add(this ,operation)
     }
+    
+    //endregion
 
     //region IRepositoryCallBack
 

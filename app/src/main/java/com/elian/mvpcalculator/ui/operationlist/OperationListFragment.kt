@@ -43,7 +43,7 @@ class OperationListFragment : Fragment(),
     override fun onDestroy()
     {
         super.onDestroy()
-        
+
         presenter.onDestroy()
     }
 
