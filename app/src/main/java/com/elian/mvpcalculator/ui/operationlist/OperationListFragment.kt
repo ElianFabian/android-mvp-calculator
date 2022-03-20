@@ -75,7 +75,7 @@ class OperationListFragment : Fragment(),
 
     override fun onShowOperation(operation: Operation)
     {
-        Toast.makeText(context, operation.toString(), Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, operation.toString(), Toast.LENGTH_SHORT).show()
     }
 
     //endregion

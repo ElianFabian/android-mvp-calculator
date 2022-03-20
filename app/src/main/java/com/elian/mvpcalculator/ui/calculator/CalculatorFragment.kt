@@ -3,8 +3,6 @@ package com.elian.mvpcalculator.ui.calculator
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import com.elian.mvpcalculator.R
 import com.elian.mvpcalculator.data.model.Operation
