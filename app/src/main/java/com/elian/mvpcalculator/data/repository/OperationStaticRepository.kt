@@ -6,7 +6,9 @@ import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.ui.calculator.CalculatorContract
 import com.elian.mvpcalculator.ui.operationlist.IOperationListContract
 
-open class OperationStaticRepository : CalculatorContract.IRepository,
+open class OperationStaticRepository :
+
+    CalculatorContract.IRepository,
     IOperationListContract.IRepository
 {
     private var list = mutableListOf<Operation>()

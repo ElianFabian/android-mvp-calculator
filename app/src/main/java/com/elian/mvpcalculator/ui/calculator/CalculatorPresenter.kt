@@ -6,7 +6,8 @@ class CalculatorPresenter(private var view: CalculatorContract.IView?) :
     CalculatorContract.IPresenter,
     CalculatorContract.IOnInteractorListener
 {
-    private var interactor: CalculatorContract.IInteractor? = CalculatorInteractor(this)
+    //private var interactor: CalculatorContract.IInteractor? = CalculatorInteractor(this)
+    private var interactor: CalculatorInteractor? = CalculatorInteractor(this)
 
     //region CalculatorContract.IPresenter
 

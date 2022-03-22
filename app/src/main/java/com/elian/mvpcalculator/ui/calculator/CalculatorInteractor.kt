@@ -5,12 +5,12 @@ import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.data.repository.OperationStaticRepository
 
 class CalculatorInteractor(private val listener: CalculatorContract.IOnInteractorListener) :
-    CalculatorContract.IInteractor,
+    //CalculatorContract.IInteractor,
     IRepositoryCallback
 {
     //region Methods
 
-    override fun validateData(operation: Operation)
+    /*override*/ fun validateData(operation: Operation)
     {
         when (operation.error)
         {
