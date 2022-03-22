@@ -13,4 +13,5 @@ This is an example of MVP with a simple calculator app.
 
 ![MVP Calculator Scheme](https://user-images.githubusercontent.com/86477169/159551535-788b08dd-1fcd-4ca5-9ddc-ab9501c6baa5.jpg)
   
-<img alt="MVP Calculator Scheme" src="https://user-images.githubusercontent.com/86477169/159552007-483a9bb5-ca13-4d49-aec2-64a63c03f8d4.svg?example=foo&sanitize=true">
+
+![MVP Calculator Scheme](https://user-images.githubusercontent.com/86477169/159553944-25e9b06c-e74a-4601-9971-b50118b16ad8.svg)
