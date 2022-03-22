@@ -11,6 +11,6 @@ This is an example of MVP with a simple calculator app.
   
 # MVP Schemes
 
-<a hrf="https://raw.githubusercontent.com/ElianFabian/android-mvp-calculator/main/MVP%20Calculator%20Scheme.svg">
+<a href="https://raw.githubusercontent.com/ElianFabian/android-mvp-calculator/main/MVP%20Calculator%20Scheme.svg">
   <img src="MVP Calculator Scheme.svg">
 </a>
