@@ -15,6 +15,3 @@ This is an example of MVP with a simple calculator app.
   <img src="MVP Calculator Scheme.svg">
 </a>
 
-<a href="https://raw.githubusercontent.com/ElianFabian/android-mvp-calculator/main/MVP%20OperationList%20Scheme.svg">
-  <img src="MVP OperationList Scheme.svg">
-</a>
