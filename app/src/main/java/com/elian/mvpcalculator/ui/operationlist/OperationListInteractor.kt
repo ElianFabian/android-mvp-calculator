@@ -5,10 +5,10 @@ import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.data.repository.OperationStaticRepository
 
 class OperationListInteractor(private val listener: IOperationListContract.IOnInteractorListener) :
-
+    IOperationListContract.IInteractor,
     IRepositoryListCallback
 {
-    public fun load()
+    public override fun load()
     {
         OperationStaticRepository.getInstance().getList(this)
     }

@@ -7,7 +7,7 @@ class OperationListPresenter(private var view: IOperationListContract.IView?) :
     IOperationListContract.IPresenter,
     IOperationListContract.IOnInteractorListener
 {
-    private var interactor: OperationListInteractor? = OperationListInteractor(this)
+    private var interactor: IOperationListContract.IInteractor? = OperationListInteractor(this)
 
     //region OperationListContract.IPresenter
 
