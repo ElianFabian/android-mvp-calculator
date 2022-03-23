@@ -12,6 +12,11 @@ interface IOperationListContract
         fun load()
     }
 
+    interface IInteractor
+    {
+        fun load()
+    }
+
     interface IRepository
     {
         fun getList(callback: IRepositoryListCallback)
