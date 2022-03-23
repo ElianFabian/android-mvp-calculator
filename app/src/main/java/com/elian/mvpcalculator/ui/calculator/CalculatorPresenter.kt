@@ -2,12 +2,12 @@ package com.elian.mvpcalculator.ui.calculator
 
 import com.elian.mvpcalculator.data.model.Operation
 
-class CalculatorPresenter(private var view: CalculatorContract.IView?) :
-    CalculatorContract.IPresenter,
-    CalculatorContract.IOnInteractorListener
+class CalculatorPresenter(private var view: ICalculatorContract.IView?) :
+    ICalculatorContract.IPresenter,
+    ICalculatorContract.IOnInteractorListener
 {
     //private var interactor: CalculatorContract.IInteractor? = CalculatorInteractor(this)
-    private var interactor: CalculatorContract.IInteractor? = CalculatorInteractor(this)
+    private var interactor: ICalculatorContract.IInteractor? = CalculatorInteractor(this)
 
     //region CalculatorContract.IPresenter
 

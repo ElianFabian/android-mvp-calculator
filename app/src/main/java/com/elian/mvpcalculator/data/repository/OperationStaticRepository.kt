@@ -3,12 +3,12 @@ package com.elian.mvpcalculator.data.repository
 import com.elian.mvpcalculator.base.IRepositoryCallback
 import com.elian.mvpcalculator.base.IRepositoryListCallback
 import com.elian.mvpcalculator.data.model.Operation
-import com.elian.mvpcalculator.ui.calculator.CalculatorContract
+import com.elian.mvpcalculator.ui.calculator.ICalculatorContract
 import com.elian.mvpcalculator.ui.operationlist.IOperationListContract
 
 open class OperationStaticRepository :
 
-    CalculatorContract.IRepository,
+    ICalculatorContract.IRepository,
     IOperationListContract.IRepository
 {
     private var list = mutableListOf<Operation>()

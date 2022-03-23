@@ -4,8 +4,8 @@ import com.elian.mvpcalculator.base.IRepositoryCallback
 import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.data.repository.OperationStaticRepository
 
-class CalculatorInteractor(private val listener: CalculatorContract.IOnInteractorListener) :
-    CalculatorContract.IInteractor,
+class CalculatorInteractor(private val listener: ICalculatorContract.IOnInteractorListener) :
+    ICalculatorContract.IInteractor,
     IRepositoryCallback
 {
     //region Methods

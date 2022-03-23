@@ -8,10 +8,10 @@ import com.elian.mvpcalculator.R
 import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.databinding.FragmentCalculatorBinding
 
-class CalculatorFragment : Fragment(), CalculatorContract.IView
+class CalculatorFragment : Fragment(), ICalculatorContract.IView
 {
     private lateinit var binding: FragmentCalculatorBinding
-    private var presenter: CalculatorContract.IPresenter? = null
+    private var presenter: ICalculatorContract.IPresenter? = null
 
     //region Fragment Methods
 

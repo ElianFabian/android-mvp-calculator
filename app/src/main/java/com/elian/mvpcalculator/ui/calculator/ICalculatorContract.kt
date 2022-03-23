@@ -4,7 +4,7 @@ import com.elian.mvpcalculator.base.IBasePresenter
 import com.elian.mvpcalculator.base.IRepositoryCallback
 import com.elian.mvpcalculator.data.model.Operation
 
-interface CalculatorContract
+interface ICalculatorContract
 {
     /**
      * This interface indicates what the view has to do in the use cases.
