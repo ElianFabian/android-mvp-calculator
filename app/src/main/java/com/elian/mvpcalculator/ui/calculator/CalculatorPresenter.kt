@@ -11,7 +11,7 @@ class CalculatorPresenter(private var view: ICalculatorContract.IView?) :
 
     //region CalculatorContract.IPresenter
 
-    override fun validateData(operation: Operation)
+    override fun onValidateData(operation: Operation)
     {
         view?.cleanInputFieldsErrors()
         interactor?.validateData(operation)

@@ -84,7 +84,7 @@ class CalculatorFragment : Fragment(), ICalculatorContract.IView
             binding.tieNumber2.text.toString(),
             type
         )
-        presenter?.validateData(operation)
+        presenter?.onValidateData(operation)
     }
 
     private fun emptyTextFields()
