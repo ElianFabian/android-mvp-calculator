@@ -49,7 +49,7 @@ class CalculatorPresenter(private var view: ICalculatorContract.IView?) :
 
     override fun onFailure()
     {
-        
+
     }
 
     //endregion
