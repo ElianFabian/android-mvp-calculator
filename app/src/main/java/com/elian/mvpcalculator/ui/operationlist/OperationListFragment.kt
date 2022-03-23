@@ -14,7 +14,6 @@ import com.elian.mvpcalculator.ui.operationlist.adapter.OperationAdapter
 
 class OperationListFragment : Fragment(),
     IOperationListContract.IView,
-    IOperationListContract.IOnInteractorListener,
     OperationAdapter.IOnManageList
 {
     private lateinit var binding: FragmentOperationListBinding
