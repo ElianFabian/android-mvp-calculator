@@ -19,7 +19,7 @@ interface ICalculatorContract
 
     interface IPresenter : IBasePresenter
     {
-        fun onValidateData(operation: Operation)
+        fun validateData(operation: Operation)
     }
 
     interface IInteractor
