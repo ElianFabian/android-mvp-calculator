@@ -20,7 +20,7 @@ open class OperationStaticRepository :
 
     //region CalculatorContract.IRepository
 
-    override fun add(callback: IRepositoryCallback, operation: Operation)
+    override fun add(callback: ICalculatorContract.IRepositoryCallback, operation: Operation)
     {
         list.add(operation)
         operation.id = list.size
@@ -33,7 +33,7 @@ open class OperationStaticRepository :
 
     //region IOperationListContract.IRepository
 
-    override fun getList(callback: IRepositoryListCallback) = callback.onSuccess(list)
+    override fun getList(callback: IOperationListContract.IRepositoryCallback) = callback.onSuccess(list)
 
     //endregion
 }
