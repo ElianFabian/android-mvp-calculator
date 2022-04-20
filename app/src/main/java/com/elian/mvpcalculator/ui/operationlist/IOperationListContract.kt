@@ -1,11 +1,11 @@
 package com.elian.mvpcalculator.ui.operationlist
 
 import com.elian.mvpcalculator.base.IBasePresenter
-import com.elian.mvpcalculator.base.IRepositoryListCallback
+import com.elian.mvpcalculator.data.model.Operation
 
 interface IOperationListContract
 {
-    interface IView : IRepositoryListCallback
+    interface IView : IRepositoryCallback
 
     interface IPresenter : IBasePresenter
     {
@@ -19,8 +19,13 @@ interface IOperationListContract
 
     interface IRepository
     {
-        fun getList(callback: IRepositoryListCallback)
+        fun getList(callback: IRepositoryCallback)
     }
 
-    interface IOnInteractorListener : IRepositoryListCallback
+    interface IRepositoryCallback
+    {
+        fun onSuccess(list: List<Operation>)
+    }
+
+    interface IOnInteractorListener : IRepositoryCallback
 }

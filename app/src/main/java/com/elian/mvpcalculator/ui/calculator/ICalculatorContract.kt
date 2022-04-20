@@ -1,7 +1,6 @@
 package com.elian.mvpcalculator.ui.calculator
 
 import com.elian.mvpcalculator.base.IBasePresenter
-import com.elian.mvpcalculator.base.IRepositoryCallback
 import com.elian.mvpcalculator.data.model.Operation
 
 interface ICalculatorContract
@@ -30,6 +29,12 @@ interface ICalculatorContract
     interface IRepository
     {
         fun add(callback: IRepositoryCallback, operation: Operation)
+    }
+
+    interface IRepositoryCallback
+    {
+        fun onSuccess(operation: Operation)
+        fun onFailure()
     }
 
     /**
