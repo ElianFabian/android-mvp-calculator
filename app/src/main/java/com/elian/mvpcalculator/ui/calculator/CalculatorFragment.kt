@@ -55,8 +55,7 @@ class CalculatorFragment : Fragment(), ICalculatorContract.IView
             {
                 presenter?.onDestroy()
                 presenter = null
-                NavHostFragment.findNavController(this)
-                    .navigate(R.id.action_calculatorFragment_to_operationListFragment)
+                NavHostFragment.findNavController(this).navigate(R.id.action_calculatorFragment_to_operationListFragment)
             }
             else             -> return false
         }

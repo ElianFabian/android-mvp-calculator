@@ -5,7 +5,6 @@ import com.elian.mvpcalculator.ui.calculator.ICalculatorContract
 import com.elian.mvpcalculator.ui.operationlist.IOperationListContract
 
 object OperationStaticRepository :
-
     ICalculatorContract.IRepository,
     IOperationListContract.IRepository
 {
@@ -22,7 +21,6 @@ object OperationStaticRepository :
     }
 
     //endregion
-
 
     //region IOperationListContract.IRepository
 
