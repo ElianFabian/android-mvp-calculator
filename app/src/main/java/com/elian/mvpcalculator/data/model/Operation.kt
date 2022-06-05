@@ -31,31 +31,18 @@ data class Operation(val type: Type)
         }
     }
 
-    enum class Type
+    enum class Type(private val toStringValue: String)
     {
-        ADDITION
-        {
-            override fun toString(): String = "+"
-        },
-        SUBTRACTION
-        {
-            override fun toString(): String = "-"
-        },
-        MULTIPLICATION
-        {
-            override fun toString(): String = "×"
-        },
-        DIVISION
-        {
-            override fun toString(): String = "÷"
-        }
+        ADDITION("+"), SUBTRACTION("-"), MULTIPLICATION("×"), DIVISION("÷");
+
+        override fun toString(): String = toStringValue
     }
 
     enum class Error
     {
         NO_ERROR, DIVISION_BY_ZERO, NUMBER1_IS_NAN, NUMBER2_IS_NAN, NUMBERS_ARE_NAN
     }
-    
+
     var id = 0
 
     var error = Error.NO_ERROR
