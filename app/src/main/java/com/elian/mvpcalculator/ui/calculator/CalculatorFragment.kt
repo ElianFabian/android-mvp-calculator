@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.elian.mvpcalculator.R
 import com.elian.mvpcalculator.data.model.Operation
+import com.elian.mvpcalculator.data.model.OperationType
 import com.elian.mvpcalculator.databinding.FragmentCalculatorBinding
 
 class CalculatorFragment : Fragment(), ICalculatorContract.IView
@@ -70,14 +71,14 @@ class CalculatorFragment : Fragment(), ICalculatorContract.IView
     {
         binding.apply()
         {
-            btnAdd.setOnClickListener { operationOnClickListener(Operation.Type.ADDITION) }
-            btnSubtract.setOnClickListener { operationOnClickListener(Operation.Type.SUBTRACTION) }
-            btnMultiply.setOnClickListener { operationOnClickListener(Operation.Type.MULTIPLICATION) }
-            btnDivide.setOnClickListener { operationOnClickListener(Operation.Type.DIVISION) }
+            btnAdd.setOnClickListener { operationOnClickListener(OperationType.ADDITION) }
+            btnSubtract.setOnClickListener { operationOnClickListener(OperationType.SUBTRACTION) }
+            btnMultiply.setOnClickListener { operationOnClickListener(OperationType.MULTIPLICATION) }
+            btnDivide.setOnClickListener { operationOnClickListener(OperationType.DIVISION) }
         }
     }
 
-    private fun operationOnClickListener(type: Operation.Type)
+    private fun operationOnClickListener(type: OperationType)
     {
         val operation = Operation(
             binding.tieNumber1.text.toString(),
