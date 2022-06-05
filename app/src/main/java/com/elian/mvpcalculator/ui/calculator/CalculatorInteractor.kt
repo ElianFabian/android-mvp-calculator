@@ -28,7 +28,7 @@ class CalculatorInteractor(private val listener: ICalculatorContract.IOnInteract
         // If there's any error we're not going to add the operation into the repository
         if (operation.error != Operation.Error.NO_ERROR) return
 
-        OperationStaticRepository.getInstance().add(this ,operation)
+        OperationStaticRepository.add(this ,operation)
     }
     
     //endregion

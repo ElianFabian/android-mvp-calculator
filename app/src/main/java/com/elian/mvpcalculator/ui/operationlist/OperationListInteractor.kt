@@ -9,7 +9,7 @@ class OperationListInteractor(private val listener: IOperationListContract.IOnIn
 {
     public override fun load()
     {
-        OperationStaticRepository.getInstance().getList(this)
+        OperationStaticRepository.getList(this)
     }
 
     //region IRepositoryListCallback

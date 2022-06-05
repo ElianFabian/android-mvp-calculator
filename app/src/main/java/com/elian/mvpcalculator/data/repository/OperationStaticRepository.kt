@@ -4,19 +4,12 @@ import com.elian.mvpcalculator.data.model.Operation
 import com.elian.mvpcalculator.ui.calculator.ICalculatorContract
 import com.elian.mvpcalculator.ui.operationlist.IOperationListContract
 
-open class OperationStaticRepository :
+object OperationStaticRepository :
 
     ICalculatorContract.IRepository,
     IOperationListContract.IRepository
 {
     private var list = mutableListOf<Operation>()
-
-    companion object
-    {
-        private var instance = OperationStaticRepository()
-
-        fun getInstance(): OperationStaticRepository = instance
-    }
 
     //region CalculatorContract.IRepository
 
