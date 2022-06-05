@@ -8,7 +8,7 @@ data class Operation(val type: Type)
         {
             error = Error.NUMBER1_IS_NAN
 
-            this.number1 = null
+            this.number1 = Float.NaN
         }
         else this.number1 = number1.toFloat()
 
@@ -17,7 +17,7 @@ data class Operation(val type: Type)
             error = if (error == Error.NUMBER1_IS_NAN) Error.NUMBERS_ARE_NAN
             else Error.NUMBER2_IS_NAN
 
-            this.number2 = null
+            this.number2 = Float.NaN
         }
         else this.number2 = number2.toFloat()
 
@@ -47,8 +47,8 @@ data class Operation(val type: Type)
 
     var error = Error.NO_ERROR
 
-    var number1: Float? = 0f
-    var number2: Float? = 0f
+    var number1: Float = 0f
+    var number2: Float = 0f
 
     val result: Float?
         get()
@@ -57,13 +57,13 @@ data class Operation(val type: Type)
 
             return when (type)
             {
-                Type.ADDITION       -> number1!! + number2!!
-                Type.SUBTRACTION    -> number1!! - number2!!
-                Type.MULTIPLICATION -> number1!! * number2!!
+                Type.ADDITION       -> number1 + number2
+                Type.SUBTRACTION    -> number1 - number2
+                Type.MULTIPLICATION -> number1 * number2
                 Type.DIVISION       ->
                 {
-                    if (number2 == 0f) return null
-                    else number1!! / number2!!
+                    return if (number2 == 0f) null
+                    else number1 / number2
                 }
             }
         }
