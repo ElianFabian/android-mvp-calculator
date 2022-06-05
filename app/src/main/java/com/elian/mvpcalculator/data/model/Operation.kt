@@ -18,8 +18,7 @@ data class Operation(val type: OperationType)
         else this.number2 = number2.toFloat()
 
         // The NUMBER2_IS_NAN error has a greater priority than DIVISION_BY_ZERO error
-        if (type == OperationType.DIVISION &&
-            this.number2 == 0f &&
+        if (type == OperationType.DIVISION && this.number2 == 0f &&
             error != OperationError.NUMBER1_IS_NAN
         )
         {
